@@ -9,3 +9,8 @@ export enum AuthActionTypes {
 export interface AuthReducerTypes {
   isLoading: boolean;
 }
+
+export interface LoginRequestType {
+  email: string;
+  password: string;
+}
