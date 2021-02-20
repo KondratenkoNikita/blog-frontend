@@ -1,7 +1,7 @@
 import React from 'react';
 import { ThemeProvider, CssBaseline } from '@material-ui/core';
 import { Provider } from 'react-redux';
-import configureStore from 'store/index';
+import configureStore from 'store/store';
 import Auth from 'pages/auth/Auth';
 import NavBar from 'components/NavBar';
 import theme from 'styles/theme';

@@ -1,9 +1,7 @@
-import isUndefined from 'lodash/isUndefined';
-
 declare type AnyFunction = (...args: any[]) => any;
 
 export type ActionsUnion<A extends Record<string, AnyFunction>> = ReturnType<
-A[keyof A]
+  A[keyof A]
 >;
 
 export type PickAction<T, U> = T extends { type: U } ? T : never;
@@ -21,6 +19,6 @@ export function createAction<T extends string, P>(
 export function createAction<T extends string, P>(type: T, payload?: P): Action {
   return {
     type,
-    ...(isUndefined(payload) ? {} : { payload }),
+    ...(payload ? { payload } : {}),
   };
 }

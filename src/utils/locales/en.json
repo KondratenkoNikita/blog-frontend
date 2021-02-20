@@ -1,0 +1,9 @@
+{
+  "login": "Login",
+  "loginEmail": "Email",
+  "loginPassword": "Password",
+  "loginCreateAccaunt": "Create accaunt",
+  "loginTitle": "Welcome to DEVELOP_BLOG",
+  "loginInvalidName": "InvalidName",
+  "loginInvalidPassword": "InvalidPassword"
+}
