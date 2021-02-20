@@ -18,6 +18,14 @@
     "import/extensions": "off",
     "import/prefer-default-export": "off",
     "import/no-unresolved": "off",
+    "no-unused-vars": [
+      "warn",
+      {
+        "vars": "local",
+        "args": "none",
+        "ignoreRestSiblings": true
+      }
+    ],
     "max-len": [2, { "code": 120 }]
   }
 }

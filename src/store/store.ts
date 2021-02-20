@@ -11,7 +11,6 @@ const configureStore = (preloadedState?: PreloadedState<Record<string, unknown>>
   const middlewareEnhancer = applyMiddleware(sagaMiddleware);
   const enhancers = [middlewareEnhancer];
   const composedEnhancers = composeWithDevTools(...enhancers);
-
   const store = createStore(
     createReducers,
     preloadedState,

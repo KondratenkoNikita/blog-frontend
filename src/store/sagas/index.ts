@@ -4,6 +4,6 @@ import auth from './auth';
 
 export default function* unionSagas(): Generator {
   yield all([
-    auth,
+    auth(),
   ]);
 }

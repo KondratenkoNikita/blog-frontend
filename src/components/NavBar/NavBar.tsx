@@ -13,7 +13,6 @@ import { useStyles } from './styles';
 const NavBar: React.FC = (): React.ReactElement => {
   const classes = useStyles();
   const isMd = useMediaQuery('(min-width: 768px)');
-  console.log(isMd);
 
   return (
     <div className={classes.navBar}>

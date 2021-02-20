@@ -1,4 +1,9 @@
-import React, { memo, useState, useEffect } from 'react';
+import React, {
+  memo,
+  useState,
+  useEffect,
+  useCallback,
+} from 'react';
 import {
   Paper,
   Typography,
@@ -8,22 +13,45 @@ import { useDispatch } from 'react-redux';
 import { AuthActions } from 'store/actions/auth';
 import { t } from 'utils/locales/locale';
 import { BaseInput } from 'components/inputs';
+import { ENTER_CODE } from './declarations';
 import { useStyles } from './styles';
 
 const Auth: React.FC = (): React.ReactElement => {
   const classes = useStyles();
   const dispatch = useDispatch();
+  const [isFocus, setIsFocus] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const type = 'login';
 
-  useEffect(() => {
-
-  }, [email, password]);
-
-  const login = () => {
-    dispatch(AuthActions.login({ email, password }));
+  const onClick = () => {
+    setIsFocus(true);
   };
+
+  const login = useCallback(
+    () => {
+      dispatch(AuthActions.loginRequest({ email, password }));
+    },
+    [dispatch, email, password],
+  );
+
+  const handlerKeypress = useCallback(
+    (event: KeyboardEvent) => {
+      if (event.charCode === ENTER_CODE && isFocus && email && password) {
+        login();
+      }
+    }, [email, password, isFocus, login],
+  );
+
+  const onBlur = () => {
+    setIsFocus(false);
+  };
+
+  useEffect(() => {
+    document.addEventListener('keypress', (e) => handlerKeypress(e));
+
+    return () => document.removeEventListener('keypress', handlerKeypress);
+  }, [email, password, handlerKeypress]);
 
   return (
     <div className={classes.login}>
@@ -39,7 +67,9 @@ const Auth: React.FC = (): React.ReactElement => {
           <BaseInput
             label={t('loginEmail')}
             value={email}
-            onChange={setEmail}
+            onClick={onClick}
+            onBlur={onBlur}
+            onChange={(e) => setEmail(e.target.value)}
             inputClass={classes.rootInput}
           />
         </div>
@@ -47,7 +77,9 @@ const Auth: React.FC = (): React.ReactElement => {
           <BaseInput
             label={t('loginPassword')}
             value={password}
-            onChange={setPassword}
+            onClick={onClick}
+            onBlur={onBlur}
+            onChange={(e) => setPassword(e.target.value)}
             inputClass={classes.rootInput}
           />
         </div>

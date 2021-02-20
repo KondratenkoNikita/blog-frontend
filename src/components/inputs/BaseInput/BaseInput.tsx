@@ -12,6 +12,8 @@ const BaseInput: React.FC<BaseInputType> = ({
   inputClass,
   helperClass,
   onChange = () => {},
+  onBlur = () => {},
+  onClick = () => {},
   error = false,
 }: BaseInputType): React.ReactElement<BaseInputType> => (
   <>
@@ -22,7 +24,9 @@ const BaseInput: React.FC<BaseInputType> = ({
       disableUnderline
       error={error}
       value={value}
-      onChange={(val) => onChange(val.target.value)}
+      onBlur={onBlur}
+      onClick={onClick}
+      onChange={(event) => onChange(event)}
       classes={{ root: inputClass }}
     />
     <Typography

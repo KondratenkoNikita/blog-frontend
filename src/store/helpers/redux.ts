@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 declare type AnyFunction = (...args: any[]) => any;
 
 export type ActionsUnion<A extends Record<string, AnyFunction>> = ReturnType<
@@ -20,6 +19,6 @@ export function createAction<T extends string, P>(
 export function createAction<T extends string, P>(type: T, payload?: P): Action {
   return {
     type,
-    ...(payload ? {} : { payload }),
+    ...(payload ? { payload } : {}),
   };
 }

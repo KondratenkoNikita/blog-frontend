@@ -1,14 +1,12 @@
-import { makeStyles, withStyles, Theme } from '@material-ui/core';
-
-export const StyledInput = withStyles({
-
-});
+import { makeStyles, Theme } from '@material-ui/core';
 
 export const useStyles = makeStyles((theme: Theme) => ({
   login: {
     display: 'flex',
     maxWidth: 500,
     margin: '0 auto',
+    height: 'calc(100vh - 64px)',
+    position: 'relative',
   },
   rootInput: {
     height: 50,
@@ -18,9 +16,12 @@ export const useStyles = makeStyles((theme: Theme) => ({
     border: `2px solid ${theme.palette.primary.light}`,
   },
   rootPaper: {
-    margin: '150px 16px 0 16px',
-    padding: '60px 40px',
     width: '100%',
+    padding: '60px 40px',
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
   },
   inputWr: {
     marginBottom: 20,

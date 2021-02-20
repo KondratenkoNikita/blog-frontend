@@ -1,3 +1,8 @@
-export interface AuthState {
+export type AuthState = {
   isLoading: boolean;
+  isAuthenticated: boolean;
+  data: {
+    email: string;
+    userName: string;
+  }
 }
