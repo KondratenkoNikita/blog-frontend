@@ -15,9 +15,9 @@ const NavBar: React.FC = (): React.ReactElement => {
   const isMd = useMediaQuery('(min-width: 768px)');
 
   return (
-    <div className={classes.navBar}>
-      <AppBar position="static">
-        <Toolbar>
+    <div>
+      <AppBar position="static" classes={{ root: classes.root }}>
+        <Toolbar classes={{ regular: classes.regular, root: classes.root }}>
           <div className={classes.container}>
             <div className={classes.wr}>
               {!isMd && (
@@ -28,15 +28,13 @@ const NavBar: React.FC = (): React.ReactElement => {
               <Logo />
             </div>
             <div>
-              <Button
-                color="inherit"
-                classes={{ root: classes.rootLogin }}
-              >
-                Login
+              <Button classes={{ root: classes.rootLogin }}>
+                Log in
               </Button>
               <Button
-                color="secondary"
                 variant="contained"
+                color="primary"
+                classes={{ root: classes.rootCreate }}
               >
                 Create account
               </Button>

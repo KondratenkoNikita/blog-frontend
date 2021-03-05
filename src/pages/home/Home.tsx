@@ -1,14 +1,24 @@
 import React, { memo, useState } from 'react';
+import SidebarNav from './components/sidebarNav';
 import { useStyles } from './styles';
 
 const Home: React.FC = (): React.ReactElement => {
-  const styles = useStyles();
-  const [tmp] = useState('tmp');
+  const classes = useStyles();
 
   return (
-    <>
-      {tmp}
-    </>
+    <div className={classes.home}>
+      <div className={classes.homeWr}>
+        <div className={classes.sidebarWrLeft}>
+          <SidebarNav />
+        </div>
+        <main className={classes.mainWr}>
+          test
+        </main>
+        <div className={classes.sidebarWrLeft}>
+          test
+        </div>
+      </div>
+    </div>
   );
 };
 

@@ -5,10 +5,6 @@ export enum AuthActionTypes {
   LOGIN_ERROR = 'LOGIN_ERROR',
 }
 
-export type AuthReducerTypes = {
-  isLoading: boolean;
-}
-
 export type LoginRequestType = {
   email: string;
   password: string;

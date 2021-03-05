@@ -5,5 +5,7 @@
   "loginCreateAccaunt": "Create accaunt",
   "loginTitle": "Welcome to DEVELOP_BLOG",
   "loginInvalidName": "InvalidName",
-  "loginInvalidPassword": "InvalidPassword"
+  "loginInvalidPassword": "InvalidPassword",
+  "communityTitle": "DEVELOP Community is a community of 5,918 amazing developers",
+  "communityText": "We're a place where coders share, stay up-to-date and grow their careers."
 }

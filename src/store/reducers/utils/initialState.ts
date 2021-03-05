@@ -1,5 +1,5 @@
-import { UtilsReducerTypes } from 'store/types/utils';
+import { UtilsState } from './declarations';
 
-export const INITIAL_STATE: UtilsReducerTypes = {
+export const INITIAL_STATE: UtilsState = {
   text: '',
 };

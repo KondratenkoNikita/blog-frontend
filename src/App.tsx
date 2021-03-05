@@ -2,8 +2,8 @@ import React from 'react';
 import { ThemeProvider, CssBaseline } from '@material-ui/core';
 import { Provider } from 'react-redux';
 import configureStore from 'store/store';
-import Auth from 'pages/auth/Auth';
-import NavBar from 'components/NavBar';
+import Router from 'router/routes';
+import NavBar from 'components/navBar';
 import theme from 'styles/theme';
 
 const storeState = configureStore({});
@@ -13,7 +13,7 @@ const App: React.FC = () => (
     <ThemeProvider theme={theme}>
       <NavBar />
       <CssBaseline />
-      <Auth />
+      <Router />
     </ThemeProvider>
   </Provider>
 );

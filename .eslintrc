@@ -12,9 +12,10 @@
   "rules": {
     "import/no-extraneous-dependencies": ["error", { "devDependencies": ["**/*.test.tsx", "**/*.story.tsx"] }],
     "react/jsx-props-no-spreading": "warn",
+    object-curly-newline: "off",
     "react/jsx-filename-extension": [0],
     "no-use-before-define": "off",
-    "@typescript-eslint/no-use-before-define": ["error"],
+    "@typescript-eslint/no-use-before-define": ["warn"],
     "import/extensions": "off",
     "import/prefer-default-export": "off",
     "import/no-unresolved": "off",
@@ -26,6 +27,6 @@
         "ignoreRestSiblings": true
       }
     ],
-    "max-len": [2, { "code": 120 }]
+    "max-len": [2, { "code": 100 }]
   }
 }
