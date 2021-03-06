@@ -1,12 +1,13 @@
 import { makeStyles, Theme } from '@material-ui/core';
 
 export const useStyles = makeStyles((theme: Theme) => ({
-  login: {
+  auth: {
     display: 'flex',
     maxWidth: 500,
     margin: '0 auto',
     height: 'calc(100vh - 64px)',
     position: 'relative',
+    fontFamily: 'Montserrat',
   },
   rootInput: {
     height: 50,

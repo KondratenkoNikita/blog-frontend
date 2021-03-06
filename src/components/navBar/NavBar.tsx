@@ -15,7 +15,7 @@ const NavBar: React.FC = (): React.ReactElement => {
   const isMd = useMediaQuery('(min-width: 768px)');
 
   return (
-    <div>
+    <div className={classes.navBar}>
       <AppBar position="static" classes={{ root: classes.root }}>
         <Toolbar classes={{ regular: classes.regular, root: classes.root }}>
           <div className={classes.container}>

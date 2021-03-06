@@ -2,6 +2,9 @@ import { makeStyles } from '@material-ui/core';
 import colors from 'styles/colors';
 
 export const useStyles = makeStyles({
+  navBar: {
+    fontFamily: 'Montserrat',
+  },
   root: {
     borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
     backgroundColor: 'transparent',

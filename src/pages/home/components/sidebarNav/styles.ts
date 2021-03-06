@@ -1,11 +1,10 @@
 import { makeStyles } from '@material-ui/core';
 import colors from 'styles/colors';
 
-// @ts-ignore
 export const useStyles = makeStyles(() => ({
   sidebarNav: {
-    margin: 0,
-    padding: '0 0 0 8px',
+    margin: '16px 0 0 0',
+    padding: 0,
   },
   item: {
     color: colors.black,

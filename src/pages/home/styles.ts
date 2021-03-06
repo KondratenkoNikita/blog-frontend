@@ -6,6 +6,7 @@ export const useStyles = makeStyles(() => ({
     width: '100%',
     height: 'auto',
     backgroundColor: colors.base10,
+    fontFamily: 'Montserrat',
   },
   homeWr: {
     width: '100%',

@@ -1,5 +1,6 @@
 import React, { memo, useState } from 'react';
 import SidebarNav from './components/sidebarNav';
+import News from './components/news';
 import { useStyles } from './styles';
 
 const Home: React.FC = (): React.ReactElement => {
@@ -15,7 +16,7 @@ const Home: React.FC = (): React.ReactElement => {
           test
         </main>
         <div className={classes.sidebarWrLeft}>
-          test
+          <News />
         </div>
       </div>
     </div>

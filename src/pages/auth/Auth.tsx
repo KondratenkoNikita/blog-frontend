@@ -54,7 +54,7 @@ const Auth: React.FC = (): React.ReactElement => {
   }, [email, password, handlerKeypress]);
 
   return (
-    <div className={classes.login}>
+    <div className={classes.auth}>
       <Paper
         elevation={0}
         variant="outlined"

@@ -18,23 +18,23 @@ const theme = createMuiTheme({
     },
     h2: {
       fontSize: 22,
-      fontWeight: 500,
+      fontWeight: 600,
     },
     h3: {
       fontSize: 20,
-      fontWeight: 500,
+      fontWeight: 600,
     },
     h4: {
       fontSize: 18,
-      fontWeight: 400,
+      fontWeight: 600,
     },
     h5: {
       fontSize: 16,
-      fontWeight: 500,
+      fontWeight: 600,
     },
     h6: {
       fontSize: 14,
-      fontWeight: 'bold',
+      fontWeight: 600,
     },
     subtitle1: {
       fontSize: 14,
